@@ -10,7 +10,8 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
 
@@ -27,14 +28,15 @@ public class HelloE2ESeleniumTest2 {
     
 // https://github.com/bonigarcia/webdrivermanager/blob/master/README.md
     @BeforeAll
-    public static void setUpClass() throws Exception {
-        //WebDriverManager.chromedriver().version("78").setup();
-        WebDriverManager.chromedriver().setup();
+    public static void setUpClass() throws Exception {       
+        //WebDriverManager.chromedriver().setup(); not available on ubuntu
+        WebDriverManager.firefoxdriver().setup();
     }
 
     @BeforeEach
     public void setUp() throws Exception {
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
+        driver = new FirefoxDriver();
     }
 
     @AfterEach

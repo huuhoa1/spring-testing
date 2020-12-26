@@ -1,0 +1,13 @@
+{
+  "id" : "d784854f-9289-4d6c-85d2-a20a60689030",
+  "request" : {
+    "url" : "/hello/Pan",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "Who is this 'Pan' you're talking about?",
+    "transformers" : [ "response-template", "spring-cloud-contract" ]
+  },
+  "uuid" : "d784854f-9289-4d6c-85d2-a20a60689030"
+}
