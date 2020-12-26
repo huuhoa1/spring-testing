@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-testing-deployment
+  labels:
+    app: spring-testing
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-testing
+  template:
+    metadata:
+      labels:
+        app: spring-testing
+    spec:
+      containers:
+      - name: spring-testing
+        image: coconut33/spring-testing:latest
+        ports:
+        - containerPort: 8080
+
